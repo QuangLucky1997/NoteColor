@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.FragmentUpdateNote">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dp_0"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        tools:targetApi="lollipop">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/black">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+               <ImageView
+                   android:id="@+id/imgUpdate"
+                   android:src="@drawable/left"
+                   android:layout_centerVertical="true"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar"
+        android:layout_margin="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_20"
+        app:cardElevation="@dimen/dp_20">
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appBar"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:text="@string/title"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextTitleUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewTitle"
+                android:layout_margin="@dimen/dp_10" />
+
+            <TextView
+                android:id="@+id/text_view_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextTitleUpdate"
+                android:layout_margin="@dimen/dp_20"
+                android:text="@string/description"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextDescriptionUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/text_view_des"
+                android:layout_margin="@dimen/dp_10"
+                android:gravity="top|start"
+                android:hint="Enter a notes ..."
+                android:minLines="6"
+                android:paddingTop="@dimen/dp_10"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/sp_20" />
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

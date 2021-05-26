@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewNotes"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_10"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/black"
+    app:cardCornerRadius="@dimen/dp_12"
+    app:cardElevation="@dimen/dp_12">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:text="ahsjahs"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_25"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_view_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_title"
+            android:layout_margin="@dimen/dp_10"
+            android:text="2020-27-9"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/text_view_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_date_time"
+            android:layout_margin="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+        <ImageView
+            android:id="@+id/imgTrash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextTitle"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:src="@drawable/garbage" />
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

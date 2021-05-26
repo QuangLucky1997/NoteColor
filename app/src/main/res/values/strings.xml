@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">NoteApp2021</string>
+    <string name="all_note">All Notes</string>
+    <string name="number_note">4 ghi chu</string>
+    <string name="title_activity_note2">NoteActivity2</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="change_color_background">Change color background</string>
+    <string name="change_page_template">Change page template</string>
+    <string name="delete_note">Delete</string>
+    <string name="save">Save</string>
+    <string name="title">Title</string>
+    <string name="search">search</string>
+    <string name="description">Description</string>
+</resources>

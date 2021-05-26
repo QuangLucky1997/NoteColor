@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentNote">
+    <fragment
+        android:id="@+id/fragmentNote"
+        android:name="com.androiddev97.noteapp2021.ui.fragment.FragmentNote"
+        android:label="FragmentNote" >
+        <action
+            android:id="@+id/action_fragmentNote_to_fragmentNewNote"
+            app:destination="@id/fragmentNewNote"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_fragmentNote_to_fragmentUpdateNote"
+            app:destination="@id/fragmentUpdateNote"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@anim/fragment_close_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNewNote"
+        android:name="com.androiddev97.noteapp2021.ui.fragment.FragmentNewNote"
+        android:label="FragmentNewNote" >
+        <action
+            android:id="@+id/action_fragmentNewNote_to_fragmentNote"
+            app:destination="@id/fragmentNote"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentUpdateNote"
+        android:name="com.androiddev97.noteapp2021.ui.fragment.FragmentUpdateNote"
+        android:label="FragmentUpdateNote" >
+        <action
+            android:id="@+id/action_fragmentUpdateNote_to_fragmentNote"
+            app:destination="@id/fragmentNote" />
+        <argument
+            android:name="currentNote"
+            app:argType="com.androiddev97.noteapp2021.data.model.Note" />
+    </fragment>
+</navigation>
