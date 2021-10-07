@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardViewNotes"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/dp_10"
     android:clickable="true"
     android:focusable="true"
-    app:cardBackgroundColor="@color/black"
     app:cardCornerRadius="@dimen/dp_12"
     app:cardElevation="@dimen/dp_12">
 
 
     <RelativeLayout
+        android:id="@+id/colorBackground"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -21,40 +22,72 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp_10"
+            android:singleLine="true"
             android:text="ahsjahs"
             android:textColor="@color/white"
             android:textSize="@dimen/sp_25"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/text_view_date_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <View
+            android:id="@+id/line"
+            android:layout_width="@dimen/dp_400"
             android:layout_below="@+id/text_view_title"
-            android:layout_margin="@dimen/dp_10"
-            android:text="2020-27-9"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp_15"
-            android:textStyle="italic" />
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_height="1dp"
+            android:background="@android:color/white"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/viewTrashDate"
+            android:layout_below="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/text_view_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:layout_marginStart="16dp"
+                android:singleLine="true"
+                android:text="1-9-2010"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgTrash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextTitle"
+                android:layout_margin="@dimen/dp_5"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/garbage"
+                app:layout_constraintBottom_toBottomOf="@id/text_view_date_time"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_view_date_time"
+                tools:ignore="UnknownIdInLayout" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
         <TextView
             android:id="@+id/text_view_des"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/text_view_date_time"
+            android:layout_below="@+id/viewTrashDate"
             android:layout_margin="@dimen/dp_10"
             android:textColor="@color/white"
+            android:text="abvcjk"
             android:textSize="@dimen/sp_16" />
 
-        <ImageView
-            android:id="@+id/imgTrash"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/editTextTitle"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="@dimen/dp_10"
-            android:layout_marginRight="@dimen/dp_10"
-            android:src="@drawable/garbage" />
 
     </RelativeLayout>
 
